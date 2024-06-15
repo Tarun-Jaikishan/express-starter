@@ -231,7 +231,7 @@ console.log("Setup complete");
 
 // Delete starter files
 
-const otherFile = "./express-starter.js";
+const otherFile = "./express-starter.script.js";
 
 if (fs.existsSync(otherFile)) fs.unlinkSync(otherFile);
 

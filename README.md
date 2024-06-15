@@ -13,7 +13,7 @@ For more information, you can connect with me on [LinkedIn](https://www.linkedin
 To create a new Node.js Express application, run the following command in your command prompt:
 
 ```sh
-node express-starter.js
+node express-starter.script.js
 ```
 
 ### Project Structure
@@ -39,7 +39,7 @@ node express-starter.js
 To create a new TypeScript Express application, run the following command in your command prompt:
 
 ```sh
-node ts-express-starter.js
+node ts-express-starter.script.js
 ```
 
 ### Project Structure
