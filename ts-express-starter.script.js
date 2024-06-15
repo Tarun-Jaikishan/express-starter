@@ -20,7 +20,7 @@ const packageJson = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
 
 packageJson.scripts = {
   dev: "nodemon ./src/index.ts",
-  start: "node ./dist/src/index.js",
+  start: "tsc && node ./dist/index.js",
   build: "tsc",
 };
 
