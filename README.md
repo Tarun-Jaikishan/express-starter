@@ -63,3 +63,5 @@ node ts-express-starter.js
     └── index.ts
     └── global.d.ts
 ```
+
+[LinkedIn](https://www.linkedin.com/in/tarunjaikishan/) [Portfolio](https://tarunjaikishan.me/).
