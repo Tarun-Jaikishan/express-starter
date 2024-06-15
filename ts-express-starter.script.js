@@ -232,8 +232,10 @@ console.log("Setup complete");
 // Delete starter files
 
 const otherFile = "./express-starter.script.js";
+const readme = "./README.md";
 
 if (fs.existsSync(otherFile)) fs.unlinkSync(otherFile);
+if (fs.existsSync(readme)) fs.unlinkSync(readme);
 
 // Delete the current file
 const currentFilePath = process.argv[1];
