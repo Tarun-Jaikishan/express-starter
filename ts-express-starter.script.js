@@ -200,9 +200,9 @@ app.get("/", (req: Request, res: Response) => {
 const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
-  console.log("\n***************************************************\n");
+  console.log("\\n***************************************************\\n");
   console.log("Server running on PORT: " + port);
-  console.log("\n***************************************************\n");
+  console.log("\\n***************************************************\\n");
 });
 `;
 
