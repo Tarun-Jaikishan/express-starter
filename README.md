@@ -4,7 +4,7 @@ This repository provides templates for setting up a basic Node.js Express applic
 
 ### ⚠️ Ensure that you have Git and Node.js installed on your system before proceeding!
 
-For more information, you can connect with me on [LinkedIn](https://www.linkedin.com/in/tarunjaikishan/) [Portfolio](https://tarunjaikishan.me/).
+For more information, you can connect with me on [LinkedIn](https://www.linkedin.com/in/tarunjaikishan/) [Portfolio](https://tarunjaikishan.me/)
 
 ## Quick Start
 
@@ -64,4 +64,4 @@ node ts-express-starter.js
     └── global.d.ts
 ```
 
-[LinkedIn](https://www.linkedin.com/in/tarunjaikishan/) [Portfolio](https://tarunjaikishan.me/).
+[LinkedIn](https://www.linkedin.com/in/tarunjaikishan/) [Portfolio](https://tarunjaikishan.me/)

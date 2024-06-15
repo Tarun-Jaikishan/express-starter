@@ -93,7 +93,18 @@ fs.writeFileSync(".env", "PORT=8080", (err) => {
   console.log(".env has been created!");
 });
 
-// fs.rmSync(".git", { recursive: true, force: true });
+fs.rmSync(".git", { recursive: true, force: true });
 execSync("git init", { stdio: "inherit" });
 
 console.log("Setup complete");
+
+// Delete starter files
+
+const otherFile = "./ts-express-starter.js";
+
+if (fs.existsSync(otherFile)) fs.unlinkSync(otherFile);
+
+// Delete the current file
+const currentFilePath = process.argv[1];
+
+fs.unlinkSync(currentFilePath);

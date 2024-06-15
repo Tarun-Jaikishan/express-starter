@@ -163,7 +163,7 @@ directories.split(" ").forEach((dir) => {
   if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath);
 });
 
-const appJsContent = `import fs from "fs";
+const indexTsContent = `import fs from "fs";
 import path from "path";
 
 import express, { Request, Response } from "express";
@@ -207,9 +207,15 @@ app.listen(port, () => {
 `;
 
 // Write index.ts
-fs.writeFileSync("./src/index.ts", appJsContent, (err) => {
+fs.writeFileSync("./src/index.ts", indexTsContent, (err) => {
   if (err) throw err;
   console.log("index.ts has been created!");
+});
+
+// Write global.d.ts
+fs.writeFileSync("./src/global.d.ts", "", (err) => {
+  if (err) throw err;
+  console.log("global.d.ts has been created!");
 });
 
 // Write .env
@@ -218,7 +224,18 @@ fs.writeFileSync(".env", "PORT=8080", (err) => {
   console.log(".env has been created!");
 });
 
-// fs.rmSync(".git", { recursive: true, force: true });
+fs.rmSync(".git", { recursive: true, force: true });
 execSync("git init", { stdio: "inherit" });
 
-console.log("Setup complete.");
+console.log("Setup complete");
+
+// Delete starter files
+
+const otherFile = "./express-starter.js";
+
+if (fs.existsSync(otherFile)) fs.unlinkSync(otherFile);
+
+// Delete the current file
+const currentFilePath = process.argv[1];
+
+fs.unlinkSync(currentFilePath);
