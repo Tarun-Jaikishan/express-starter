@@ -178,7 +178,6 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cors({ origin: "*" }));
-app.use("/uploads", express.static("./../../"));
 
 // Logger
 const accessLogStream = fs.createWriteStream(
