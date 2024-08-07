@@ -19,7 +19,9 @@ const app = express();
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(cors({ origin: "*", credentials: true }));
-app.use(expSession({ secret: envSessionKey }));
+app.use(
+  expSession({ secret: envSessionKey, resave: true, saveUninitialized: true })
+);
 app.use(helmet());
 app.use(morgan("short"));
 
