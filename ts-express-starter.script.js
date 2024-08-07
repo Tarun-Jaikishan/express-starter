@@ -16,9 +16,6 @@ execSync(
     stdio: "inherit",
   }
 );
-execSync("npx tsc --init", {
-  stdio: "inherit",
-});
 
 // Update package.json
 const packageJson = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
