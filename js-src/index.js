@@ -38,7 +38,7 @@ app.get(
 );
 
 // Invalid Route
-
+//
 const InvalidRoute = expAsync(async (_, res) => {
   res.status(404).json({ error: "Invalid API Route" });
 });
@@ -50,7 +50,9 @@ app
   .put(InvalidRoute)
   .patch(InvalidRoute)
   .delete(InvalidRoute);
+//
 
+// Error Logger
 app.use(errorLogger);
 
 // Listener
