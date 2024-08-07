@@ -2,6 +2,8 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
+fs.renameSync("ts-src", "src");
+
 execSync("npm init -y", { stdio: "inherit" });
 
 execSync(
@@ -48,10 +50,6 @@ directories.split(" ").forEach((dir) => {
 });
 
 fs.rmSync(".git", { recursive: true, force: true });
-execSync(
-  "git clone https://github.com/Tarun-Jaikishan/express-starter-typescript.git .",
-  { stdio: "inherit" }
-);
 
 console.log("Setup complete");
 
