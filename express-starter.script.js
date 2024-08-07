@@ -53,9 +53,11 @@ console.log("Setup complete");
 
 const otherFile = "./ts-express-starter.script.js";
 const readme = "./README.md";
+const tsConfig = "./tsconfig.json";
 
 if (fs.existsSync(otherFile)) fs.unlinkSync(otherFile);
 if (fs.existsSync(readme)) fs.unlinkSync(readme);
+if (fs.existsSync(tsConfig)) fs.unlinkSync(tsConfig);
 
 // Delete the current file
 const currentFilePath = process.argv[1];
