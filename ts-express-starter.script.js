@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 fs.renameSync("ts-src", "src");
+fs.rmSync("js-src", { recursive: true, force: true });
 
 execSync("npm init -y", { stdio: "inherit" });
 
