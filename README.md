@@ -4,7 +4,7 @@ This repository provides templates for setting up a basic Node.js Express applic
 
 ### ⚠️ Ensure that you have Git and Node.js installed on your system before proceeding!
 
-For more information, you can connect with me on [LinkedIn](https://www.linkedin.com/in/tarunjaikishan/) [Portfolio](https://tarunjaikishan.me/)
+For more information, you can connect with me on [LinkedIn](https://www.linkedin.com/in/tarunjaikishan/) [Portfolio](https://tarunjaikishan.netlify.app/)
 
 ## Quick Start
 
@@ -24,13 +24,18 @@ node express-starter.script.js
 ├── .env
 ├── .gitignore
 └── ./src/
+    ├── ./config/
     ├── ./controllers/
+    ├── ./db/
     ├── ./routes/
     ├── ./models/
     ├── ./utils/
-    ├── ./middlewares/
+    └── ./middlewares/
+        └── error.middleware.js
     ├── ./config/
-    ├── access.log
+    ├── common.js
+    ├── constants.js
+    ├── environment.js
     └── index.js
 ```
 
@@ -51,17 +56,21 @@ node ts-express-starter.script.js
 ├── .env
 ├── .gitignore
 └── ./src/
+    ├── ./config/
     ├── ./controllers/
+    ├── ./db/
     ├── ./routes/
     ├── ./models/
     ├── ./utils/
-    ├── ./middlewares/
-    ├── ./config/
-    ├── ./interfaces/
     ├── ./types/
-    ├── access.log
+        └── types.ts
+    ├── ./middlewares/
+        └── error.middleware.ts
+    ├── common.ts
+    ├── constants.ts
+    ├── environment.ts
+    ├── global.d.ts
     └── index.ts
-    └── global.d.ts
 ```
 
-[LinkedIn](https://www.linkedin.com/in/tarunjaikishan/) [Portfolio](https://tarunjaikishan.me/)
+[LinkedIn](https://www.linkedin.com/in/tarunjaikishan/) [Portfolio](https://tarunjaikishan.netlify.app/)
