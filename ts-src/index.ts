@@ -28,10 +28,24 @@ app.use(morgan("short"));
 // Basic GET API
 app.get(
   "/",
-  expAsync(async (req: Request, res: Response) => {
+  expAsync(async (_, res) => {
     res.status(200).json({ message: "Hello --Typescript-- World" });
   })
 );
+
+// Invalid Route
+
+const InvalidRoute = expAsync(async (_, res) => {
+  res.status(404).json({ error: "Invalid API Route" });
+});
+
+app
+  .route("*")
+  .get(InvalidRoute)
+  .post(InvalidRoute)
+  .put(InvalidRoute)
+  .patch(InvalidRoute)
+  .delete(InvalidRoute);
 
 app.use(errorLogger);
 
