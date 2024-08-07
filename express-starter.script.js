@@ -5,6 +5,15 @@ const path = require("path");
 fs.renameSync("js-src", "src");
 fs.rmSync("ts-src", { recursive: true, force: true });
 
+// Delete starter files
+const otherFile = "./ts-express-starter.script.js";
+const readme = "./README.md";
+const tsConfig = "./tsconfig.json";
+
+if (fs.existsSync(otherFile)) fs.unlinkSync(otherFile);
+if (fs.existsSync(readme)) fs.unlinkSync(readme);
+if (fs.existsSync(tsConfig)) fs.unlinkSync(tsConfig);
+
 execSync("npm init -y", { stdio: "inherit" });
 
 execSync(
@@ -48,16 +57,6 @@ directories.split(" ").forEach((dir) => {
 fs.rmSync(".git", { recursive: true, force: true });
 
 console.log("Setup complete");
-
-// Delete starter files
-
-const otherFile = "./ts-express-starter.script.js";
-const readme = "./README.md";
-const tsConfig = "./tsconfig.json";
-
-if (fs.existsSync(otherFile)) fs.unlinkSync(otherFile);
-if (fs.existsSync(readme)) fs.unlinkSync(readme);
-if (fs.existsSync(tsConfig)) fs.unlinkSync(tsConfig);
 
 // Delete the current file
 const currentFilePath = process.argv[1];

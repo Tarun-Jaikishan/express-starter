@@ -5,6 +5,13 @@ const path = require("path");
 fs.renameSync("ts-src", "src");
 fs.rmSync("js-src", { recursive: true, force: true });
 
+// Delete starter files
+const otherFile = "./express-starter.script.js";
+const readme = "./README.md";
+
+if (fs.existsSync(otherFile)) fs.unlinkSync(otherFile);
+if (fs.existsSync(readme)) fs.unlinkSync(readme);
+
 execSync("npm init -y", { stdio: "inherit" });
 
 execSync(
@@ -50,14 +57,6 @@ directories.split(" ").forEach((dir) => {
 fs.rmSync(".git", { recursive: true, force: true });
 
 console.log("Setup complete");
-
-// Delete starter files
-
-const otherFile = "./express-starter.script.js";
-const readme = "./README.md";
-
-if (fs.existsSync(otherFile)) fs.unlinkSync(otherFile);
-if (fs.existsSync(readme)) fs.unlinkSync(readme);
 
 // Delete the current file
 const currentFilePath = process.argv[1];
